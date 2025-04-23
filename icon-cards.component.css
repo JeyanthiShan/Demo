@@ -1,0 +1,134 @@
+.extension-section {
+    background-color: #051527; 
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  .extension-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .extension-status-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .status-btn {
+    background-color: #576085;
+    color: white !important;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-family: auto;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .status-btn.active {
+    background-color: #f72440;
+    color: black !important;
+  }
+  
+  
+  .extension-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0b1e35;
+    padding: 16px;
+    border-radius: 12px;
+    height: 180px;
+  }
+  
+  .extension-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .extension-icon {
+    width: 45px;
+    height: 40px;
+  }
+  
+  .extension-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .extension-name {
+    font-weight: bold;
+    font-family: monospace;
+  }
+  
+  .extension-description {
+    font-size: 12px;
+    color: #a0a0a0;
+  }
+  
+  .extension-actions {
+    display: flex;
+    align-items: center;
+    gap: 168px;
+  }
+  .extension-sector {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  .extension-header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0b1e35;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+  .extension-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .remove-button {
+    color: white !important;
+  }
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #06182d; 
+    padding: 16px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); 
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .extension-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .extension-action {
+      margin-top: 8px;
+    }
+    .extension-actions {
+      gap: 130px;
+    }
+    .list-extent {
+      font-size:large;
+    }
+    .extension-header {
+      display: block;
+    }
+  }
+  
