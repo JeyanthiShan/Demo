@@ -1,0 +1,45 @@
+<div class="extension-section">
+  <div class="header">  
+   <div class="extension-header-title"> 
+    <div class="extension-action"> 
+      <img src="assets/logoo.PNG" alt="Extension Icon" class="extension-icon" />
+      <div class="extension-details">
+        <h1>Extensions</h1>
+      </div>
+    </div>
+      <div class="extension-action">
+        <img src="assets/icon-sun.svg" alt="Extension Icon" class="extension-icon">
+      </div>
+    
+   </div> 
+  
+    <div class="extension-header">
+      <h2 class="list-extent">Extensions List</h2>
+      <div class="extension-status-buttons">
+        <button mat-button class="status-btn" [class.active]="selected === 'all'" (click)="selectStatus('all')">All</button>
+        <button mat-button class="status-btn" [class.active]="selected === 'active'" (click)="selectStatus('active')">Active</button>
+        <button mat-button class="status-btn" [class.active]="selected === 'inactive'" (click)="selectStatus('inactive')">Inactive</button>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="extension-sector">
+    <div class="extension-card" *ngFor="let extension of filteredExtensions">
+      <div class="extension-info">
+        <img [src]="extension.icon" alt="Extension Icon" class="extension-icon" />
+        <div class="extension-details">
+          <div class="extension-name">{{ extension.name }}</div>
+          <div class="extension-description">{{ extension.description }}</div>
+        </div>
+      </div>
+  
+      <div class="extension-actions">
+        <button mat-stroked-button class="remove-button" (click)="removeExtension(extension)">
+          Remove
+        </button>
+        <mat-slide-toggle [(ngModel)]="extension.enabled"></mat-slide-toggle>
+      </div>
+    </div>
+  </div>
+</div>
+  
